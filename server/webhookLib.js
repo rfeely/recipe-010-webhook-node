@@ -59,7 +59,7 @@ WebhookLib.prototype.send1 = function(url, html, callback) {
 		self.dsSigner1Email = dsRecipeLib.getSignerEmail(self.dsSigner1Email);
 		self.dsCC1Name = dsRecipeLib.getSignerName(self.dsCC1Name);
 		self.dsCC1Email = dsRecipeLib.getSignerEmail(self.dsCC1Email);
-        
+
 		callback(result, html);
 	});
 };

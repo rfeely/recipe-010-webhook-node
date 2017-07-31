@@ -174,13 +174,10 @@ module.exports.makeTempEmail = function() {
 	emailCount = Math.pow(emailCount, 2);
 
 	var email = emailCount + new Date().getTime() + ip;
-    //console.error("**************" + email + "****************");
 	email = new Buffer(email).toString('base64');
-    //console.error("**************" + email + "****************");
 	email = email.replace("/[^a-zA-Z0-9]/g", "");
 	email = email.substring(0, Math.min(25, email.length));
-    //console.error("**************" + email + "****************");
-    
+
 	return email + "@" + tempEmailServer;
 }
 
