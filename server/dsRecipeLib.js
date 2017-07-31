@@ -177,7 +177,7 @@ module.exports.makeTempEmail = function() {
 	email = new Buffer(email).toString('base64');
 	email = email.replace("/[^a-zA-Z0-9]/g", "");
 	email = email.substring(0, Math.min(25, email.length));
-    console.log(email);
+    console.error("===============" + email + "======================================");
     
 	return email + "@" + tempEmailServer;
 }
