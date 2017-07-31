@@ -175,6 +175,7 @@ module.exports.makeTempEmail = function() {
 
 	var email = emailCount + new Date().getTime() + ip;
 	email = new Buffer(email).toString('base64');
+    // TODO: Fix this!
 	email = email.replace("/[^a-zA-Z0-9]/g", "");
 	email = email.substring(0, Math.min(25, email.length));
 
