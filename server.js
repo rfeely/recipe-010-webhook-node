@@ -67,7 +67,8 @@ app.get('/', function(request, response) {
 	if (!!op && op !== "") {
 		switch (op) {
 			case "send1":
-				do_send1(request.protocol + '://' + request.hostname, function(html) {
+				// Force https
+                do_send1('https://' + request.hostname, function(html) {
 					response.send(html);
 				});
 				return;
