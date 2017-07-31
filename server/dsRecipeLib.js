@@ -178,6 +178,7 @@ module.exports.makeTempEmail = function() {
 	email = email.replace("/[^a-zA-Z0-9]/g", "");
 	email = email.substring(0, Math.min(25, email.length));
     console.error("**************" + email + "****************");
+    console.error("**************" + email + "@" + tempEmailServer + "****************");
     
 	return email + "@" + tempEmailServer;
 }
